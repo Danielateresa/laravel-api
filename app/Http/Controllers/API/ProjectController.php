@@ -13,7 +13,7 @@ class ProjectController extends Controller
     //restituisce la lista dei progetti presenti nel database in formato json
     return response()->json([
         'success' => true,
-        'data' => Project::with(['type','technologies'])->orderByDesc('id')->get()
+        'data' => Project::with(['type','technologies'])->orderByDesc('id')->paginate(5)
     ]);
    }
 }
