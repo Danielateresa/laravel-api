@@ -90,7 +90,6 @@
 
         </tfoot>
     </table>
-    <!-- sistemare stile -->
     {{$projects->links('vendor.pagination.bootstrap-5')}}
 </div>
 
