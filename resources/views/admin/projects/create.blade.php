@@ -65,7 +65,7 @@
             @forelse($technologies as $technology)
             @if($errors->any())
             <option value="{{$technology->id}}"
-                {{ in-array($technology->id, old('technologies', [])) ? 'selected' : '' }}>{{$technology->name}}
+                {{ in_array($technology->id, old('technologies', [])) ? 'selected' : '' }}>{{$technology->name}}
                 <!-- in caso di errore validazione controlla se ci sono technologie selezionate, se erano state selezionate prima della validazione o se non c'è selezione -->
             </option>
             @else
