@@ -41,7 +41,7 @@
         <div>
             <input type="file" name="cover_img" id="cover_img"
                 class="form-control @error('cover_img') is-invalid @enderror" placeholder="" aria-describedby="helpId">
-            <small id="helpId" class="text-muted">Edit cover image, must be max 250kb</small>
+            <small id="helpId" class="text-muted">Edit cover image</small>
         </div>
     </div>
     @error('cover_img')
