@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel Boolfolio') }}</title>
+    <title>{{ config('app.name', 'Boolfolio') }}</title>
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -27,9 +27,7 @@
     <div id="app">
 
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Laravel Boolfolio</a>
-
-            <!-- sostituito la searchbar -->
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Boolfolio</a>
             <ul class="navbar-nav ml-auto pe-4">
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -51,6 +49,7 @@
                 </li>
             </ul>
         </header>
+        <!-- header -->
 
         <div class="container-fluid">
             <div class="row">
@@ -92,6 +91,7 @@
                         </ul>
                     </div>
                 </nav>
+                <!-- nav -->
 
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                     @yield('content')
