@@ -9,7 +9,9 @@
         <div class="row row-cols-2 g-4">
             <div class="col">
                 @if($project->cover_img)
-                <img class="img-fluid w-100 mb-3" src="{{asset('storage/' . $project->cover_img)}}" alt="">
+                <div class="img_window">
+                    <img class="img-fluid w-100 mb-3" src="{{asset('storage/' . $project->cover_img)}}" alt="">
+                </div>
                 @endif
             </div>
             <div class="col">

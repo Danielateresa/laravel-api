@@ -120,3 +120,26 @@ main {
         width: 100px;
     }
 }
+
+.img_window {
+    width: 95%;
+    height: 500px;
+    overflow: auto;
+}
+
+/* Track */
+.img_window::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.img_window::-webkit-scrollbar-track {
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 10px;
+}
+
+/* Handle */
+.img_window::-webkit-scrollbar-thumb {
+    background: rgb(175, 175, 175);
+    border-radius: 10px;
+}
