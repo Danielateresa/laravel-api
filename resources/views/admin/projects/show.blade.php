@@ -3,7 +3,7 @@
 @section('content')
 <div class="content d-flex flex-column">
 
-    <h1 class="py-5">Project {{$project->title}}</h1>
+    <h1 class="py-5">{{$project->title}}</h1>
 
     <div class="container">
         <div class="row row-cols-2 g-4">
@@ -19,6 +19,8 @@
                 <p>{{$project->title}}</p>
                 <h4>Project slug: </h4>
                 <p>{{$project->slug}}</p>
+                <h4>GitHub link:</h4>
+                <p><a href="{{$project->github_link}}" target="_blank">{{$project->github_link}}</a></p>
                 <h4>Type: </h4>
                 <p>{{$project->type ? $project->type->name : 'No type'}}</p>
                 <!-- c'è una tipologia assegnata? se si, mostra il nome, altrimenti No type -->
@@ -34,7 +36,7 @@
                 <p>No technology assigned for this project</p>
                 @endif
 
-                <h4 class="pt-3">Project description: </h4>
+                <h4 class="pt-3">Description: </h4>
                 <p>{{$project->description}}</p>
             </div>
         </div>

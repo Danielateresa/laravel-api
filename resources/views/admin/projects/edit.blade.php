@@ -32,10 +32,23 @@
     <div class="alert alert-danger">{{$message}}</div>
     @enderror
 
+    <div class="mb-3">
+        <label for="github_link" class="form-label">GitHub link</label>
+        <input type="text" name="github_link" id="github_link"
+            class="form-control @error('github_link') is-invalid @enderror" placeholder="" aria-describedby="helpId"
+            value="{{ old('github_link', $project->github_link) }}">
+        <small id="helpId" class="text-muted">Insert github_link project</small>
+    </div>
+    @error('github_link')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
+
     <div class="mb-3 d-flex align-items-end gap-3">
         <div>
             <label for="cover_img" class="form-label d-block">Edit cover image</label>
-            <img class="edit_form_img" src="{{asset('storage/' . $project->cover_img)}}" alt="">
+            <div class="img_box">
+                <img class="h-100 w-100" src="{{asset('storage/' . $project->cover_img)}}" alt="">
+            </div>
         </div>
 
         <div>

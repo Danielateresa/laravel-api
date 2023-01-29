@@ -116,8 +116,13 @@ main {
         }
     }
 
-    .edit_form_img {
+    .img_box {
         width: 100px;
+        height: 100px;
+
+        img {
+            object-fit: cover;
+        }
     }
 }
 

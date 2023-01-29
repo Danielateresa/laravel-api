@@ -24,6 +24,7 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
+            'github_link' => 'nullable',
             'cover_img'=>'nullable|image|max:10240',
             'type_id' => 'nullable|exists:types,id',
             'technologies' => 'exists:technologies,id',
