@@ -30,7 +30,7 @@
                 <th>image</th>
                 <th>title</th>
                 <th>slug</th>
-                <!-- <th>description</th> -->
+                <th>github link</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -38,9 +38,14 @@
             @forelse($projects as $project)
             <tr class="table-primary">
                 <td scope="row">{{$project->id}}</td>
-                <td><img class="edit_form_img" src="{{asset('storage/' . $project->cover_img)}}" alt=""></td>
+                <td>
+                    <div class="img_box">
+                        <img class="h-100 w-100" src="{{asset('storage/' . $project->cover_img)}}" alt="">
+                    </div>
+                </td>
                 <td>{{$project->title}}</td>
                 <td>{{$project->slug}}</td>
+                <td>{{$project->github_link}}</td>
                 <td>
                     <!-- show button-->
                     <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}"><i

@@ -31,6 +31,16 @@
     <div class="alert alert-danger">{{$message}}</div>
     @enderror
 
+    <div class="mb-3">
+        <label for="github_link" class="form-label">GitHub link</label>
+        <input type="text" name="github_link" id="github_link"
+            class="form-control @error('github_link') is-invalid @enderror" placeholder="" aria-describedby="helpId"
+            value="{{ old('github_link') }}">
+        <small id="helpId" class="text-muted">Insert github_link project</small>
+    </div>
+    @error('github_link')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
 
     <div class="mb-3">
         <label for="cover_img" class="form-label">Add cover image</label>
