@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="top_content d-flex">
+<div class="top_content d-flex  py-4">
     <h1 class="py-3">Project types panel</h1>
 </div>
 
@@ -22,7 +22,9 @@
                 @error('name')
                 <div class="alert alert-danger">{{$message}}</div>
                 @enderror
+                <!-- //error message-->
             </form>
+            <!-- //form -->
 
         </div>
         <div class="col-md-7">
@@ -33,6 +35,7 @@
                 <strong>{{session('message')}}</strong>
             </div>
             @endif
+            <!-- //message alert -->
             <div class="table-responsive">
                 <table class="table table-striped
                     table-hover	
@@ -68,6 +71,7 @@
                                     data-bs-target="#deleteType-{{$type->slug}}">
                                     <i class="fa-solid fa-trash text-white"></i>
                                 </button>
+                                <!-- //delete button -->
 
                                 <!-- Modal Body -->
                                 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
@@ -101,16 +105,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- //delete modal -->
                             </td>
                         </tr>
                         @empty
                         <h3>No project types on database yet</h3>
                         @endforelse
                     </tbody>
-                    <tfoot>
-
-                    </tfoot>
                 </table>
+                <!-- //table -->
             </div>
         </div>
     </div>

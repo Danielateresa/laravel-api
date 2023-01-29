@@ -2,7 +2,9 @@
 
 @section('content')
 
-<div class="top_content d-flex">
+<div class="content"></div>
+
+<div class="top_content d-flex py-4">
     <h1 class="py-3">Projects</h1>
     <a href="{{route('admin.projects.create')}}" class="btn btn-primary ms-auto align-self-center">Add Project</a>
 </div>
@@ -14,6 +16,7 @@
     <strong>{{session('message')}}</strong>
 </div>
 @endif
+<!-- //message alert -->
 
 <div class="table-responsive">
     <table class="table table-striped
@@ -38,13 +41,16 @@
                 <td><img class="edit_form_img" src="{{asset('storage/' . $project->cover_img)}}" alt=""></td>
                 <td>{{$project->title}}</td>
                 <td>{{$project->slug}}</td>
-                <!-- <td>{{$project->description}}</td> -->
                 <td>
+                    <!-- show button-->
                     <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}"><i
                             class="fa-solid fa-eye"></i></a>
+
+                    <!-- edit button-->
                     <a class="btn btn-warning" href="{{route('admin.projects.edit', $project->slug)}}"><i
                             class="fa-solid fa-pencil"></i></a>
-                    <!-- Modal trigger button -->
+
+                    <!-- Modal trigger button delete-->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#deleteProject-{{$project->id}}">
                         <i class="fa-solid fa-trash text-white"></i>
@@ -80,17 +86,16 @@
                             </div>
                         </div>
                     </div>
+                    <!-- //delete modal -->
                 </td>
             </tr>
             @empty
             <h3>No projects on database yet</h3>
             @endforelse
         </tbody>
-        <tfoot>
 
-        </tfoot>
     </table>
     {{$projects->links('vendor.pagination.bootstrap-5')}}
 </div>
-
+</div>
 @endsection
