@@ -24,7 +24,7 @@
         <p class="col-md-8 fs-5">Choose which tags to assign to different projects: #Html, #CSS, #Javascript, #PhP; the
             possibilities are
             many.
-            And if you don't find the right tags, create new ones or edit existing ones.</p>
+            If you don't find the right tags, create new ones or edit existing ones.</p>
         <button class="btn btn-primary btn-lg mt-5" type="button" href="{{ route('login') }}">Start now</button>
     </div>
 
