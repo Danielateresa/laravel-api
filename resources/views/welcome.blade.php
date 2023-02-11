@@ -21,7 +21,7 @@
             modify existing ones
             according to your needs.</p>
 
-        <p class="col-md-8 fs-5">Choose which tags to assign to different projects: #Html, #CSS, #Javascript, #PhP; the
+        <p class="col-md-8 fs-5">Choose which tags to assign to different projects: #Html, #CSS, #JavaScript, #php; the
             possibilities are
             many.
             If you don't find the right tags, create new ones or edit existing ones.</p>

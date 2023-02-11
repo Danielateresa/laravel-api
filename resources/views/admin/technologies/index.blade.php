@@ -47,7 +47,7 @@
                             <th>id</th>
                             <th>name</th>
                             <th>slug</th>
-                            <th>project count</th>
+                            <!--        <th>project count</th> -->
                             <th>actions</th>
                         </tr>
                     </thead>
@@ -64,7 +64,7 @@
                                     <small>Click to edit, press enter to update the technology name</small>
                                 </form>
                             <td>{{$technology->slug}}</td>
-                            <td>-</td>
+                            <!--   <td>-</td> -->
                             <td>
                                 <!-- Modal trigger button -->
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
